@@ -1,0 +1,12 @@
+= simple_form_for @post do |post|
+  - if @post.errors.any?
+    %div
+      %h2 
+        = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved"
+      %ul
+        - @post.errors.full_messages.each do |msg|
+          %li
+            = msg
+  = post.input :title
+  = post.input :body
+  = post.button :submit

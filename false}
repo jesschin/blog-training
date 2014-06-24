@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20140623073115_add_details_to_comment.rb

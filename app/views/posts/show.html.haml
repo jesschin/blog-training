@@ -1,0 +1,12 @@
+%h2
+  = @post.title
+%h2
+  = @post.body
+
+%h1 Comments
+= render :partial => "comments/comment", :collection => @post.comments
+
+= render "comments/form"
+
+= link_to "Edit Post", edit_post_path(@post)
+= link_to "Delete Post", post_path(@post), :method => :delete
