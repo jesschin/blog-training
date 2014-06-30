@@ -1,0 +1,2 @@
+class PhotoPost < Post
+end

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   # has_one :comment
-  has_many :comments, :as => :commentable
+  has_many :comments, :as => :commentable, :dependent => :restrict_with_exception
   has_many :authors
 
   # has_many :tags
